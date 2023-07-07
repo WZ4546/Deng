@@ -16,14 +16,5 @@ public class collector : MonoBehaviour
             kiwi.text = "kiwi number is : " + kiwinum;
         }
 
-        if (collision.gameObject.CompareTag("cier"))
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                Destroy(player);
-            }
-        }
-
     }
 }
