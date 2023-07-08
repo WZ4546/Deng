@@ -32,6 +32,7 @@ public class Playerlive : MonoBehaviour
     }
     private void ReStartLevel()
     {
+        collector.kiwinum = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -15,6 +15,7 @@ public class flag : MonoBehaviour
     }
     private void nextlevel()
     {
+        collector.kiwinum = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
