@@ -6,6 +6,7 @@ TagManager:
   tags:
   - kiwi
   - cier
+  - slug
   layers:
   - Default
   - TransparentFX

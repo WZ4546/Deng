@@ -7,6 +7,7 @@ public class move : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private BoxCollider2D coll;
+    [SerializeField] private int twice = 0;
     [SerializeField] private LayerMask ground;
     Vector2 movement;
     // Start is called before the first frame update
@@ -24,8 +25,14 @@ public class move : MonoBehaviour
         animator.SetFloat("horizontal",movement.x);
         animator.SetFloat("speed", movement.sqrMagnitude);
         rb.velocity = new Vector2(movement.x*7f,rb.velocity.y);
-        if (Input.GetButtonDown("Jump") && IsGrounded()) {
+        if (Input.GetButtonDown("Jump") && IsGrounded() ) {
             rb.velocity = new Vector2(rb.velocity.x,9f);
+            twice = 0;
+        }
+        else if (Input.GetButtonDown("Jump") && !IsGrounded() && twice == 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 7f);
+            twice++;
         }
     }
 

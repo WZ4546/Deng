@@ -20,6 +20,10 @@ public class Playerlive : MonoBehaviour
         {
             Die();
         }
+        if (collision.gameObject.CompareTag("slug"))
+        {
+            Die();
+        }
     }
 
     private void Die() {

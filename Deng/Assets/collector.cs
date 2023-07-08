@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class collector : MonoBehaviour
 {
-    private int kiwinum;
+    public static int kiwinum;
     [SerializeField] private Text kiwi;
 
     private void OnTriggerEnter2D(Collider2D collision)
